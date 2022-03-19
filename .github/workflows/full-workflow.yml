@@ -39,6 +39,9 @@ jobs:
         HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
         HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
+    - name: Heroku Scale Change
+      run: heroku ps:scale web=1
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:

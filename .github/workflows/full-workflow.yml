@@ -50,9 +50,6 @@ jobs:
     - name: Run Build
       run: npm run build
 
-    - name: Run all tests
-      run: npm run ng test
-
     - name: Set url Git
       run: git remote set-url origin https://github.com/muriIo/discord-messages-sender-app.git
 

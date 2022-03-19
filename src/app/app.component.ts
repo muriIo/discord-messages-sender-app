@@ -1,4 +1,8 @@
+//#region Imports
+
 import { Component } from '@angular/core';
+
+//#endregion
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'DMS-APP';
+
+  //#region Public Properties
+
+  public title: string = 'DMS-APP';
+
+  //#endregion
+
 }

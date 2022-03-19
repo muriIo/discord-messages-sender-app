@@ -40,7 +40,9 @@ jobs:
         HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
     - name: Heroku Scale Change
-      run: heroku ps:scale web=1
+      run: heroku ps:scale web=1 -a $HEROKU_APP_NAME
+      env:
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
